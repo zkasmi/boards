@@ -11,7 +11,7 @@ INCLUDES += -I$(RIOTBASE)/cpu/msp430-common/include/ -I$(RIOTBASE)/cpu/msp430x16
 INCLUDES += -I$(RIOTBASE)/drivers/cc110x_ng/include/ -I$(RIOTBASE)/sys/include
 
 all: $(BINDIR)$(ARCH)
-	$(MAKE) -C ../msb-430-common
+	"$(MAKE)" -C ../msb-430-common
 
 $(BINDIR)$(ARCH): $(OBJ)
 	$(AR) rcs $(BINDIR)$(ARCH) $(OBJ)
@@ -28,7 +28,7 @@ $(BINDIR)%.o: %.c
 
 # remove compilation products
 clean:
-	$(MAKE) -C ../msb-430-common clean
+	"$(MAKE)" -C ../msb-430-common clean
 	rm -f $(BINDIR)$(ARCH) $(OBJ) $(DEP)
 	@if [ -d $(BINDIR) ] ; \
 	then rmdir $(BINDIR) ; \

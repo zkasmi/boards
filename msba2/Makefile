@@ -10,7 +10,7 @@ INCLUDES += -I$(RIOTBASE)/cpu/arm_common/include/
 INCLUDES += -I$(RIOTBASE)/cpu/lpc2387/include/
 
 all: $(BINDIR)$(ARCH) 
-	$(MAKE) -C ../msba2-common
+	"$(MAKE)" -C ../msba2-common
 
 $(BINDIR)$(ARCH): $(OBJ)
 	$(AR) rcs $(BINDIR)$(ARCH) $(OBJ)
@@ -27,7 +27,7 @@ $(BINDIR)%.o: %.c
 
 # remove compilation products
 clean:
-	$(MAKE) -C ../msba2-common clean
+	"$(MAKE)" -C ../msba2-common clean
 	rm -f $(BINDIR)$(ARCH) $(OBJ) $(DEP)
 	@if [ -d $(BINDIR) ] ; \
 	then rmdir $(BINDIR) ; \

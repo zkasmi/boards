@@ -10,7 +10,7 @@ INCLUDES += -I$(RIOTBASE)/cpu/msp430-common/include/
 INCLUDES += -I$(RIOTBASE)/cpu/msp430x16x/include/
 
 all: $(BINDIR)$(ARCH)
-	$(MAKE) -C ../msb-430-common
+	"$(MAKE)" -C ../msb-430-common
 
 $(BINDIR)$(ARCH): $(OBJ)
 	mkdir -p $(BINDIR)
@@ -27,7 +27,7 @@ $(BINDIR)%.o: %.c
 
 # remove compilation products
 clean:
-	$(MAKE) -C ../msb-430-common clean
+	"$(MAKE)" -C ../msb-430-common clean
 	rm -f $(BINDIR)$(ARCH) $(OBJ) $(DEP)
 	@if [ -d $(BINDIR) ] ; \
 	then rmdir $(BINDIR) ; \

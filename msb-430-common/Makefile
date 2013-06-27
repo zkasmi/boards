@@ -11,7 +11,7 @@ INCLUDES += -I$(RIOTBASE)/drivers/include/
 .PHONY: $(BINDIR)$(ARCH)
 
 all: $(BINDIR)$(ARCH) 
-	$(MAKE) -C drivers
+	"$(MAKE)" -C drivers
 
 $(BINDIR)$(ARCH): $(OBJ)
 	echo $(AR) rcs $(BINDIR)$(ARCH) $(OBJ)
@@ -28,6 +28,6 @@ $(BINDIR)%.o: %.c
 
 # remove compilation products
 clean:
-	$(MAKE) -C drivers clean
+	"$(MAKE)" -C drivers clean
 	rm -f $(OBJ) $(DEP)
 	rm -f $(BINDIR)$(ARCH)

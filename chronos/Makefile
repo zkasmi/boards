@@ -12,7 +12,7 @@ INCLUDES += -I$(RIOTBASE)/cpu/cc430/include/
 #INCLUDES += -I/usr/msp430/include/
 
 all: $(BINDIR)chronos_base.a 
-	$(MAKE) -C drivers
+	"$(MAKE)" -C drivers
 
 $(BINDIR)chronos_base.a: $(OBJ)
 	$(AR) rcs $(BINDIR)chronos_base.a $(OBJ)
@@ -29,7 +29,7 @@ $(BINDIR)%.o: %.c
 # remove compilation products
 clean:
 	rm -f $(BINDIR)chronos_base.a $(OBJ) $(DEP)
-	$(MAKE) -C drivers clean
+	"$(MAKE)" -C drivers clean
 
 
 

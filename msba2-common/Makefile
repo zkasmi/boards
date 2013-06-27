@@ -11,7 +11,7 @@ INCLUDES += -I$(RIOTBASE)/drivers/include/
 .PHONY: $(BINDIR)msba2_common_base.a
 
 all: $(BINDIR)msba2_common_base.a 
-	$(MAKE) -C drivers
+	"$(MAKE)" -C drivers
 
 $(BINDIR)msba2_common_base.a: $(OBJ)
 	$(AR) rcs $(BINDIR)$(ARCH) $(OBJ)

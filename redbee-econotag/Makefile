@@ -5,7 +5,7 @@ DEP = $(SRC:%.c=$(BINDIR)%.d)
 export ARCH = redbee-econotag_base.a
 
 all: $(BINDIR)$(ARCH)
-	$(MAKE) -C drivers
+	"$(MAKE)" -C drivers
 
 $(BINDIR)$(ARCH): $(OBJ)
 	$(AR) rcs $(BINDIR)$(ARCH) $(OBJ)
