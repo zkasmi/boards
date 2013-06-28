@@ -9,18 +9,18 @@
  * @file
  * @internal
  * @brief		The I2C interface drivers for the LPC2387 chip.
- * 				The driver is full abstracted supporting all the i2c-interfaces of the LPC2387 chip.
- * 				The user need only to give the requested i2c-interface and the transmission baudrate.
- * 				The user can optionally give a master interrupt handler. If the user does not declare a handler,
- * 				an appropriate interrupt is automatically registered for the specific i2c interface.
+ * 			The driver is full abstracted supporting all the i2c-interfaces of the LPC2387 chip.
+ * 			The user need only to give the requested i2c-interface and the transmission baudrate.
+ * 			The user can optionally give a master interrupt handler. If the user does not declare a handler,
+ * 			an appropriate interrupt is automatically registered for the specific i2c interface.
  *
  * @author      Freie Universität Berlin, Computer Systems & Telematics
- * @author		Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
- * @author 		Marco Ziegert <ziegert@inf.fu-berlin.de>
- * @author 		Benjamin Aschenbrenner
+ * @author	Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
+ * @author 	Marco Ziegert <ziegert@inf.fu-berlin.de>
+ * @author 	Benjamin Aschenbrenner
  * @version     $Revision: 3854 $
  *
- * @note		$Id: i2c.c 3854 2013-06-14 15:27:01Z zkasmi $
+ * @note	$Id: i2c.c 3854 2013-06-14 15:27:01Z zkasmi $
  */
 
 #include "lpc23xx.h"
