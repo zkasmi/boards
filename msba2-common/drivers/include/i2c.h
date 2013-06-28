@@ -84,7 +84,8 @@
  * @param[in] i2c_mode		the operating mode.
  * @param[in] slave_addr	the slave address.
  * @param[in] baud_rate		the baud rate.
- * @param[in] handler		the I2C2 Interrupt handler (optional); by giving a NULL as parameter, an appropriate interrupt is automatically selected.
+ * @param[in] handler		the I2C2 Interrupt handler (optional); by giving a NULL as parameter, an appropriate 
+ *				interrupt is automatically selected.
  *
  * @return true if the I2C interrupt handler was installed correctly, otherwise false.
  */
