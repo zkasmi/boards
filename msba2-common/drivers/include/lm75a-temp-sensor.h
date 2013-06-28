@@ -183,9 +183,10 @@ void lm75A_start_sensor_sampling(void (*extern_interrupt_task)(void));
  * @brief	Register an interrupt handler for the external interrupt.
  * 		Only the port0 and port2 are supported.
  *
- * @param[in] port		port number
+ * @param[in] port		port number.
  * @param[in] pin_bit_mask 	pin number in form of a bit mask: Pin0 --> BIT0, Pin1 --> BIT1, Pin2 --> BIT2 = 2^2 = 4
- * @param[in] flags		define if the interrupt is generated on rising or falling edge (#GPIOINT_RISING_EDGE, #GPIOINT_FALLING_EDGE)
+ * @param[in] flags		define if the interrupt is generated on rising or falling edge (#GPIOINT_RISING_EDGE, 
+ *				#GPIOINT_FALLING_EDGE).
  * @param[in] handler		pointer to an interrupt handler.
  *
  * @return true if the the external interrupt handler is successfully registered, otherwise false.
