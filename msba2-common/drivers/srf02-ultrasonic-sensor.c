@@ -8,14 +8,14 @@
 /**
  * @file
  * @internal
- * @brief		Driver for the SRF02 ultrasonic ranger using the LPC2387 chip.
- * 				The connection between the LPC2387 and the SRF08 is based on the i2c-interface.
+ * @brief	Driver for the SRF02 ultrasonic ranger using the LPC2387 chip.
+ * 		The connection between the LPC2387 and the SRF08 is based on the i2c-interface.
  *
  * @author      Freie Universität Berlin, Computer Systems & Telematics
- * @author		Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
+ * @author	Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
  * @version     $Revision: 3854 $
  *
- * @note		$Id: sarf02-ultrasonic-sensor.c 3854 2013-06-05 13:30:01Z zkasmi $
+ * @note	$Id: sarf02-ultrasonic-sensor.c 3854 2013-06-05 13:30:01Z zkasmi $
  *
  */
 
