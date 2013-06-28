@@ -66,10 +66,10 @@
 #define I2SCLL_SCLL		45  	    /* I2C SCL Duty Cycle Low Reg */
 
 //I2C interfaces
-#define I2C0 	0 // P0.27 SDA0, P0.28 SCL0
-#define I2C1_0	1 // P0.0  SDA1, P0.1  SCL1
-#define I2C1_1	2 // P0.19 SDA1, P0.20 SCL1
-#define I2C2	3 // P0.10 SDA2, P0.11 SCL2
+#define I2C0 			0 // P0.27 SDA0, P0.28 SCL0
+#define I2C1_0			1 // P0.0  SDA1, P0.1  SCL1
+#define I2C1_1			2 // P0.19 SDA1, P0.20 SCL1
+#define I2C2			3 // P0.10 SDA2, P0.11 SCL2
 
 
 /* Functions definitions */
