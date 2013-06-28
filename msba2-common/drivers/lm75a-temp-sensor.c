@@ -9,14 +9,14 @@
 /**
  * @file
  * @internal
- * @brief		Driver for the LM75A temperature sensor and the LPC2387 chip.
- * 				The communication between the LM75A and the LPC2387 chip is based on the i2c interface.
+ * @brief	Driver for the LM75A temperature sensor and the LPC2387 chip.
+ * 		The communication between the LM75A and the LPC2387 chip is based on the i2c interface.
  *
  * @author      Freie Universität Berlin, Computer Systems & Telematics
- * @author		Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
+ * @author	Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
  * @version     $Revision: 3854 $
  *
- * @note		$Id: lm75a-temp-sensor.c 3854 2013-05-14 15:27:01Z zkasmi $
+ * @note	$Id: lm75a-temp-sensor.c 3854 2013-05-14 15:27:01Z zkasmi $
  */
 
 #include <stdlib.h>
