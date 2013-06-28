@@ -24,3 +24,4 @@ $(BINDIR)%.o: %.c
 clean:
 	rm -f $(OBJ) $(DEP)
 
+
