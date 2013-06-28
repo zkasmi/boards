@@ -172,8 +172,9 @@ void lm75A_reset(void);
  * @brief	Start a continuous sampling of the temperature values.
  *		This function prints the values of all registers over the rs232 interface.
  *
- *@param[in] external_interr_handler	pointer to an external task handler which is performed, if an external interrupt is occurred and 
- *					the external subroutine is leaved. This parameter is optional, the NULL-value can be entered.
+ *@param[in] external_interr_handler	pointer to an external task handler which is performed, if an external 
+ *					interrupt is occurred and the external subroutine is leaved. This parameter 
+ *					is optional, the NULL-value can be entered.
  */
 void lm75A_start_sensor_sampling(void (*extern_interrupt_task)(void));
 
@@ -195,9 +196,10 @@ bool lm75A_ext_irq_handler_register(int32_t port, uint32_t pin_bit_mask,
 
 /**
  * @brief	Initialize the LM75A temperature sensor.
- * 		The baud rate and the handler for the external interrupt can be initialized. The external interrupt handler is optional,
- * 		if no handler is available, the NULL-value can be entered. The hysteresis and the over-temperature are displayed 
- * 		before and after a rest action is performed. After this the LM7A sensoris set in the interrupt or the comparator mode.
+ * 		The baud rate and the handler for the external interrupt can be initialized. The external interrupt 
+ *		handler is optional, if no handler is available, the NULL-value can be entered. The hysteresis and 
+ *		the over-temperature are displayed before and after a rest action is performed. After this the LM7A 
+ *		sensor is set in the interrupt or the comparator mode.
  *
  * @param[in] i2c_interface		the i2c interface, several interfaces can be selected: i2c0, i2c1 and i2c2.
  * @param[in] baud_rate			the baud rate.
