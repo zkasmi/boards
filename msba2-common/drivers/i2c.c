@@ -20,7 +20,7 @@
  * @author 		Benjamin Aschenbrenner
  * @version     $Revision: 3854 $
  *
- * @note		$Id: i2c.c 3854 2013-05-14 15:27:01Z zkasmi $
+ * @note		$Id: i2c.c 3854 2013-06-14 15:27:01Z zkasmi $
  */
 
 #include "lpc23xx.h"
