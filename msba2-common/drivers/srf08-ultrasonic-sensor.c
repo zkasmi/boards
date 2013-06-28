@@ -8,13 +8,13 @@
 /**
  * @file
  * @internal
- * @brief		Driver for the SRF08 ultrasonic ranger and the LPC2387 chip using the i2c interface.
+ * @brief	Driver for the SRF08 ultrasonic ranger and the LPC2387 chip using the i2c interface.
  *
  * @author      Freie Universität Berlin, Computer Systems & Telematics
- * @author		Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
+ * @author	Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
  * @version     $Revision: 3854 $
  *
- * @note		$Id: srf08-ultrasonic-sensor.c 3854 2013-06-21 15:30:01Z zkasmi $
+ * @note	$Id: srf08-ultrasonic-sensor.c 3854 2013-06-21 15:30:01Z zkasmi $
  *
  */
 
