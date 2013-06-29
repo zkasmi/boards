@@ -52,112 +52,112 @@ volatile enum SMB380_MODE smb380_mode;// = SMB380_POLL;
    registers 0x14 and 34h are especially critical.
 */
 
-#define SMB380_EEPROM_OFFSET	    0x20
+#define SMB380_EEPROM_OFFSET	 		0x20
 
-#define SMB380_CHIP_ID   				    0x00		 //Chip-ID Bit0-2, default: 010b
-#define SMB380_CHIP_ID_MASK				    0x07		 //Chip-ID mask
+#define SMB380_CHIP_ID   			0x00		 //Chip-ID Bit0-2, default: 010b
+#define SMB380_CHIP_ID_MASK			0x07		 //Chip-ID mask
 
-#define SMB380_AL_ML_VERSION			    0x01		 //ml_version Bit0-3 ; al_version Bit4-7
-#define SMB380_AL_MASK					    0xF0		 //al_mask
-#define SMB380_ML_MASK					    0x0F		 //ml_mask
+#define SMB380_AL_ML_VERSION			0x01		 //ml_version Bit0-3 ; al_version Bit4-7
+#define SMB380_AL_MASK				0xF0		 //al_mask
+#define SMB380_ML_MASK				0x0F		 //ml_mask
 
-#define SMB380_ACC_X_LSB_NEWDATA		    0x02		 //LSB_acc_x Bit6-7 ;	new_data_x Bit0
-#define SMB380_ACC_X_MSB    			    0x03		 //MSB_acc_x Bit0-7
-#define SMB380_ACC_Y_LSB_NEWDATA		    0x04		 //LSB_acc_y Bit6-7 ;	new_data_y Bit0
-#define SMB380_ACC_Y_MSB    			    0x05		 //MSB_acc_y Bit0-7
-#define SMB380_ACC_Z_LSB_NEWDATA		    0x06		 //LSB_acc_z Bit6-7 ;	new_data_z Bit0
-#define SMB380_ACC_Z_MSB    			    0x07		 //MSB_acc_z Bit0-7
-#define SMB380_ACC_LSB_MASK				    0xC0
-#define SMB380_ACC_MSB_MASK				    0xFF
-#define SMB380_ACC_NEWDATA_MASK			    0x01
+#define SMB380_ACC_X_LSB_NEWDATA		0x02		 //LSB_acc_x Bit6-7 ;	new_data_x Bit0
+#define SMB380_ACC_X_MSB    			0x03		 //MSB_acc_x Bit0-7
+#define SMB380_ACC_Y_LSB_NEWDATA		0x04		 //LSB_acc_y Bit6-7 ;	new_data_y Bit0
+#define SMB380_ACC_Y_MSB    			0x05		 //MSB_acc_y Bit0-7
+#define SMB380_ACC_Z_LSB_NEWDATA		0x06		 //LSB_acc_z Bit6-7 ;	new_data_z Bit0
+#define SMB380_ACC_Z_MSB    			0x07		 //MSB_acc_z Bit0-7
+#define SMB380_ACC_LSB_MASK			0xC0
+#define SMB380_ACC_MSB_MASK			0xFF
+#define SMB380_ACC_NEWDATA_MASK			0x01
 
-#define SMB380_TEMP     				    0x08		 //Temperature Bit0-7
+#define SMB380_TEMP     			0x08		 //Temperature Bit0-7
 
-#define SMB380_STATUS     				    0x09		 //Status register, contains six flags
-#define SMB380_STATUS_ST_RESULT_MASK	    0x80
-#define SMB380_STATUS_ALERT_PHASE_MASK	    0x10
-#define SMB380_STATUS_LG_LATCHED_MASK	    0x08
-#define SMB380_STATUS_HG_LATCHED_MASK	    0x04
-#define SMB380_STATUS_STATUS_LG_MASK	    0x02
-#define SMB380_STATUS_STATUS_HG_MASK	    0x01
+#define SMB380_STATUS     			0x09		 //Status register, contains six flags
+#define SMB380_STATUS_ST_RESULT_MASK		0x80
+#define SMB380_STATUS_ALERT_PHASE_MASK		0x10
+#define SMB380_STATUS_LG_LATCHED_MASK		0x08
+#define SMB380_STATUS_HG_LATCHED_MASK		0x04
+#define SMB380_STATUS_STATUS_LG_MASK		0x02
+#define SMB380_STATUS_STATUS_HG_MASK		0x01
 
-#define SMB380_CONTROL1     			    0x0A		 //Control register - contains seven values, default: x000 0000b
-#define SMB380_CONTROL1_RESET_INT_MASK	    0x40
-#define SMB380_CONTROL1_UPDATE_MASK		    0x20
-#define SMB380_CONTROL1_EE_W_MASK		    0x10
+#define SMB380_CONTROL1     			0x0A		 //Control register - contains seven values, default: x000 0000b
+#define SMB380_CONTROL1_RESET_INT_MASK		0x40
+#define SMB380_CONTROL1_UPDATE_MASK		0x20
+#define SMB380_CONTROL1_EE_W_MASK		0x10
 #define SMB380_CONTROL1_SELF_TEST_1_MASK	0x08
 #define SMB380_CONTROL1_SELF_TEST_0_MASK	0x04
-#define SMB380_CONTROL1_SOFT_RESET_MASK	    0x02
-#define SMB380_CONTROL1_SLEEP_MASK		    0x01
+#define SMB380_CONTROL1_SOFT_RESET_MASK	    	0x02
+#define SMB380_CONTROL1_SLEEP_MASK		0x01
 
-#define SMB380_CONTROL2     			    0x0B		 //Control register - contains six values, default: x000 0011b
-#define SMB380_CONTROL2_ALERT_MASK		    0x80
-#define SMB380_CONTROL2_ANY_MOTION_MASK	    0x40
-#define SMB380_CONTROL2_COUNTER_HG_MASK	    0x30
-#define SMB380_CONTROL2_COUNTER_LG_MASK	    0x0C
-#define SMB380_CONTROL2_ENABLE_HG_MASK	    0x02
-#define SMB380_CONTROL2_ENABLE_LG_MASK	    0x01
+#define SMB380_CONTROL2     			0x0B		 //Control register - contains six values, default: x000 0011b
+#define SMB380_CONTROL2_ALERT_MASK		0x80
+#define SMB380_CONTROL2_ANY_MOTION_MASK	    	0x40
+#define SMB380_CONTROL2_COUNTER_HG_MASK	    	0x30
+#define SMB380_CONTROL2_COUNTER_LG_MASK	    	0x0C
+#define SMB380_CONTROL2_ENABLE_HG_MASK	    	0x02
+#define SMB380_CONTROL2_ENABLE_LG_MASK	    	0x01
 
-#define SMB380_LG_THRES     			    0x0C	    //  , default: 20
-#define SMB380_LG_DUR     				    0x0D	    //  , default: 150
-#define SMB380_HG_THRES     			    0x0E	    //  , default: 160
-#define SMB380_HG_DUR     				    0x0F	    //  , default: 150
-#define SMB380_ANY_MOTION_THRES   		    0x10	    //  , default: 0
-#define SMB380_ANY_MOTION_DUR_HYST		    0x11	    //  , default: 0000 0000b
-#define SMB380_ANY_MOTION_DUR_MASK		    0xC0
+#define SMB380_LG_THRES     			0x0C	    	//  , default: 20
+#define SMB380_LG_DUR     			0x0D	    	//  , default: 150
+#define SMB380_HG_THRES     			0x0E	    	//  , default: 160
+#define SMB380_HG_DUR     			0x0F	   	//  , default: 150
+#define SMB380_ANY_MOTION_THRES   		0x10	   	//  , default: 0
+#define SMB380_ANY_MOTION_DUR_HYST		0x1		//  , default: 0000 0000b
+#define SMB380_ANY_MOTION_DUR_MASK		0xC0
 #define SMB380_ANY_MOTION_DUR_HG_HYST_MASK	0x38
 #define SMB380_ANY_MOTION_DUR_LG_HYST_MASK	0x07
 
-#define SMB380_CUST1     				    0x12        //  , default: 162
-#define SMB380_CUST2     				    0x13	    //  , default: 13
+#define SMB380_CUST1     			0x12        	//  , default: 162
+#define SMB380_CUST2     			0x13	    	//  , default: 13
 
-#define SMB380_CONTROL3     			    0x14		//  , default: xxx0 1110b
-#define SMB380_CONTROL3_RANGE_MASK     	    0x18
-#define SMB380_CONTROL3_BANDWITH_MASK       0x07
+#define SMB380_CONTROL3     			0x14		//  , default: xxx0 1110b
+#define SMB380_CONTROL3_RANGE_MASK     	   	0x18
+#define SMB380_CONTROL3_BANDWITH_MASK       	0x07
 
-#define SMB380_CONTROL4     			    0x15	    //  , default: 1000 0000b
-#define SMB380_CONTROL4_SPI4_MASK		    0x80
+#define SMB380_CONTROL4     			0x15	    	//  , default: 1000 0000b
+#define SMB380_CONTROL4_SPI4_MASK		0x80
 #define SMB380_CONTROL4_ENABLE_ADV_INT_MASK	0x40
 #define SMB380_CONTROL4_NEW_DATA_INT_MASK	0x20
-#define SMB380_CONTROL4_LATCH_INT_MASK	    0x10
-#define SMB380_CONTROL4_SHADOW_DIS_MASK	    0x08
+#define SMB380_CONTROL4_LATCH_INT_MASK	    	0x10
+#define SMB380_CONTROL4_SHADOW_DIS_MASK	    	0x08
 #define SMB380_CONTROL4_WAKEUP_PAUSE_MASK	0x06
-#define SMB380_CONTROL4_WAKEUP_MASK		    0x01
+#define SMB380_CONTROL4_WAKEUP_MASK		0x01
 
-#define SMB380_OFFSET_LSB_GAIN_X  		    0x16
-#define SMB380_OFFSET_LSB_GAIN_Y  		    0x17
-#define SMB380_OFFSET_LSB_GAIN_Z  		    0x18
-#define SMB380_OFFSET_LSB_GAIN_T  		    0x19
-#define SMB380_OFFSET_LSB_MASK  		    0xC0
-#define SMB380_OFFSET_GAIN_MASK  		    0x3F
+#define SMB380_OFFSET_LSB_GAIN_X  		0x16
+#define SMB380_OFFSET_LSB_GAIN_Y  		0x17
+#define SMB380_OFFSET_LSB_GAIN_Z  		0x18
+#define SMB380_OFFSET_LSB_GAIN_T  		0x19
+#define SMB380_OFFSET_LSB_MASK  		0xC0
+#define SMB380_OFFSET_GAIN_MASK  		0x3F
 
-#define SMB380_OFFSET_MSB_X  			    0x1A
-#define SMB380_OFFSET_MSB_Y  			    0x1B
-#define SMB380_OFFSET_MSB_Z  			    0x1C
-#define SMB380_OFFSET_MSB_T  			    0x1D
+#define SMB380_OFFSET_MSB_X  			0x1A
+#define SMB380_OFFSET_MSB_Y  			0x1B
+#define SMB380_OFFSET_MSB_Z  			0x1C
+#define SMB380_OFFSET_MSB_T  			0x1D
 
-#define SMB380_TEMP_OFFSET				    -30
-#define SMB380_DEFAULT_MAXG 				4.0f
-#define SMB380_READ_REGISTER			    0x00
-#define SMB380_WRITE_REGISTER			    0x01
-#define SMB380_WAKE_UP_PAUSE_20MS		    0x00
-#define SMB380_WAKE_UP_PAUSE_80MS		    0x01
-#define SMB380_WAKE_UP_PAUSE_320MS		    0x02
-#define SMB380_WAKE_UP_PAUSE_2560MS		    0x03
-#define SMB380_RANGE_2G						0x00
-#define SMB380_RANGE_4G						0x01
-#define SMB380_RANGE_8G						0x02
-#define SMB380_BAND_WIDTH_25HZ				0x00
-#define SMB380_BAND_WIDTH_50HZ				0x01
-#define SMB380_BAND_WIDTH_100HZ				0x02
-#define SMB380_BAND_WIDTH_190HZ				0x03
-#define SMB380_BAND_WIDTH_375HZ				0x04
-#define SMB380_BAND_WIDTH_750HZ				0x05
-#define SMB380_BAND_WIDTH_1500HZ			0x06
-#define SMB380_RING_BUFF_SIZE 				256			//SMB380_RING_BUFF_SIZE * int16_t (2Byte) * 4 (x,y,z,Temp) = 512 Byte (for 64)
+#define SMB380_TEMP_OFFSET			-30
+#define SMB380_DEFAULT_MAXG 			4.0f
+#define SMB380_READ_REGISTER			0x00
+#define SMB380_WRITE_REGISTER			0x01
+#define SMB380_WAKE_UP_PAUSE_20MS		0x00
+#define SMB380_WAKE_UP_PAUSE_80MS		0x01
+#define SMB380_WAKE_UP_PAUSE_320MS		0x02
+#define SMB380_WAKE_UP_PAUSE_2560MS		0x03
+#define SMB380_RANGE_2G				0x00
+#define SMB380_RANGE_4G				0x01
+#define SMB380_RANGE_8G				0x02
+#define SMB380_BAND_WIDTH_25HZ			0x00
+#define SMB380_BAND_WIDTH_50HZ			0x01
+#define SMB380_BAND_WIDTH_100HZ			0x02
+#define SMB380_BAND_WIDTH_190HZ			0x03
+#define SMB380_BAND_WIDTH_375HZ			0x04
+#define SMB380_BAND_WIDTH_750HZ			0x05
+#define SMB380_BAND_WIDTH_1500HZ		0x06
+#define SMB380_RING_BUFF_SIZE 			256			//SMB380_RING_BUFF_SIZE * int16_t (2Byte) * 4 (x,y,z,Temp) = 512 Byte (for 64)
 //TODO chsnge size to 2048
 #define SMB380_RING_BUFF_MAX_THREADS 		10
-#define SMB380_SAMPLE_RATE_MAX				3000
+#define SMB380_SAMPLE_RATE_MAX			3000
 
 /* change from Header (public) to internal use (private)   (use it after every write to EEPROM)
  * set update_image Bit in control1 to
