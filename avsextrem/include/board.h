@@ -45,10 +45,10 @@
 #endif
 
 // if FAT is enabled this board supports files
-#define FEUERWARE_CONF_CORE_SUPPORTS_FILES		defined(MODULE_FAT)
+#define FEUERWARE_CONF_CORE_SUPPORTS_FILES			defined(MODULE_FAT)
 
-#ifdef MODULE_FAT
-#define CFG_CONF_MEM_SIZE						0x7FFFFFFF
+#ifdef MODULE_FAT                                               
+#define CFG_CONF_MEM_SIZE					0x7FFFFFFF
 #define SYSLOG_CONF_NUM_INTERFACES				2
 #else
 #define SYSLOG_CONF_NUM_INTERFACES				1
