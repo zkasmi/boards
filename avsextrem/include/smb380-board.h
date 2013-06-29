@@ -33,7 +33,7 @@
 #define SMB380_Y_AXIS				1		//Y Axis-Name
 #define SMB380_Z_AXIS				2		//Z Axis-Name
 
-#define LPM_PREVENT_SLEEP_ACCSENSOR	BIT2
+#define LPM_PREVENT_SLEEP_ACCSENSOR		BIT2
 
 enum SMB380_MODE{
 	SMB380_POLL,
