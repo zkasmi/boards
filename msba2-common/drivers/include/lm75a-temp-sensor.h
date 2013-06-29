@@ -113,7 +113,7 @@ void lm75A_set_hysteresis_temperature(float_t thsyt);
 
 
 /**
- * @brief   Set various operation modes of the temperature sensor.
+ * @brief	Set various operation modes of the temperature sensor.
  *		The LM75A provide four modes: normal, comparator, interrupt, and the shutdown mode.
  *		All these modes are defined in the lm75a-temp-sensor.h
  *
@@ -124,7 +124,7 @@ void lm75A_set_operation_mode(uint8_t op_mode);
 
 
 /**
- * @brief   Get the content of the configuration register.
+ * @brief	Get the content of the configuration register.
  *
  * @return the configuration register value.
  *
@@ -133,7 +133,7 @@ uint8_t lm75A_get_config_reg(void);
 
 
 /**
- * @brief   Get the adjusted hysteresis temperature.
+ * @brief	Get the adjusted hysteresis temperature.
  *
  * @return  the content of the hysteresis register.
  *
@@ -151,7 +151,7 @@ float_t lm75A_get_over_temperature(void);
 
 
 /**
- * @brief   Get the ambient temperature which is measured from the LM75A sensor.
+ * @brief	Get the ambient temperature which is measured from the LM75A sensor.
  *
  * @return  the content of the temperature register.
  *
