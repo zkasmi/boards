@@ -26,15 +26,15 @@ and the mailinglist (subscription via web site)
 
 /**
  * @file
- * @ingroup		LPC2387
- * @brief		CC1100 LPC2387 dependend functions
+ * @ingroup	LPC2387
+ * @brief	CC1100 LPC2387 dependend functions
  *
  * @author      Freie Universität Berlin, Computer Systems & Telematics, FeuerWhere project
- * @author		Heiko Will <hwill@inf.fu-berlin.de>
- * @author		Thomas Hillebrandt <hillebra@inf.fu-berlin.de>
+ * @author	Heiko Will <hwill@inf.fu-berlin.de>
+ * @author	Thomas Hillebrandt <hillebra@inf.fu-berlin.de>
  * @version     $Revision: 1781 $
  *
- * @note    	$Id: msba2acc-cc1100.c 1781 2010-01-26 13:39:36Z hillebra $
+ * @note    	$Id: avsextrem-cc1100.c 1781 2010-01-26 13:39:36Z hillebra $
  */
 
 #include <stdio.h>
