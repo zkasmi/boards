@@ -135,7 +135,7 @@ uint8_t lm75A_get_config_reg(void);
 /**
  * @brief	Get the adjusted hysteresis temperature.
  *
- * @return  the content of the hysteresis register.
+ * @return the content of the hysteresis register.
  *
  */
 float_t lm75A_get_hysteresis_temperature(void);
@@ -153,7 +153,7 @@ float_t lm75A_get_over_temperature(void);
 /**
  * @brief	Get the ambient temperature which is measured from the LM75A sensor.
  *
- * @return  the content of the temperature register.
+ * @return the content of the temperature register.
  *
  */
 float_t lm75A_get_ambient_temperature(void);
