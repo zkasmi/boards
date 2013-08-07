@@ -3,10 +3,9 @@ export CPU = lpc2387
 
 # toolchain config
 export PREFIX = @arm-none-eabi-
-#export PREFIX = @arm-elf-
 export CC = @$(PREFIX)gcc
 export AR = @$(PREFIX)ar
-export CFLAGS += -std=gnu99 -O2 -Wall -Wstrict-prototypes -mcpu=arm7tdmi-s -gdwarf-2
+export CFLAGS = -std=gnu99 -O2 -Wall -Wstrict-prototypes -mcpu=arm7tdmi-s -gdwarf-2
 export ASFLAGS = -gdwarf-2 -mcpu=arm7tdmi-s
 export AS = $(PREFIX)as
 export LINK = $(PREFIX)gcc
@@ -22,5 +21,3 @@ endif
 export HEXFILE = bin/$(PROJECT).hex
 export FFLAGS = $(PORT) $(PROJBINDIR)/$(PROJECT).hex
 include $(RIOTBOARD)/msba2-common/Makefile.dep
-
-export INCLUDES += -I$(RIOTCPU)/lpc2387/include
