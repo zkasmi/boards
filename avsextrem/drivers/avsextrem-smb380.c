@@ -1,6 +1,7 @@
 /*
  * msba2acc-smb380.c - implementation of the Driver for the SMB380 acceleration
  * sensor on the AVSEXTREM board.
+ *
  * Copyright (C) 2013 Freie Universität Berlin
  *
  * This source code is licensed under the LGPLv2 license,
@@ -17,9 +18,9 @@
  * @author      Freie Universität Berlin, Computer Systems & Telematics
  * @author      Marco Ziegert <ziegert@inf.fu-berlin.de>
  * @author      Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
- * @version     $Revision: 3854 $
+ * @version     $Revision: 3855 $
  *
- * @note        $Id:  msba2acc-smb380.c 3854 2010-01-18 15:27:01Z zkasmi $
+ * @note        $Id: msba2acc-smb380.c 3854 2013-09-24 18:35:03 kasmi $
  */
 
 
@@ -90,8 +91,6 @@ uint8_t getRingReadPointerforCurrentThread(void);
 void wakeUpRegisteredProcesses(void);
 uint8_t smb380emptyfunction(int16_t *);
 static void SMB380_extIntHandler(void);
-
-extern unsigned long ktimer_now(void);
 
 float SMB380_getSampleRatio(void)
 {
@@ -411,7 +410,7 @@ uint8_t writeRingBuff(int16_t *value)
 
         /* measuring temperature dependent internal sample rate of SMB380 */
         if (smb380_mode == SMB380_CONTINOUS) {
-            tickLastSample = ktimer_now();
+            tickLastSample = hwtimer_now();
             tickCurrentSamples++;
         }
 
@@ -1049,7 +1048,7 @@ void SMB380_enableNewDataInt(void)
     SMB380_ssp_read();
     SMB380_Unprepare();
     // measuring temperature dependent internal sample rate of SMB380 
-    tickStart = ktimer_now();
+    tickStart = hwtimer_now();
     tickCurrentSamples = 0;
     restoreIRQ(cpsr);
 }
