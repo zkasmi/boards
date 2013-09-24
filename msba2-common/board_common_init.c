@@ -1,28 +1,11 @@
-/******************************************************************************
-Copyright 2008-2009, Freie Universitaet Berlin (FUB). All rights reserved.
-
-These sources were developed at the Freie Universitaet Berlin, Computer Systems
-and Telematics group (http://cst.mi.fu-berlin.de).
--------------------------------------------------------------------------------
-This file is part of FeuerWare.
-
-This program is free software: you can redistribute it and/or modify it under
-the terms of the GNU General Public License as published by the Free Software
-Foundation, either version 3 of the License, or (at your option) any later
-version.
-
-FeuerWare is distributed in the hope that it will be useful, but WITHOUT
-ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with
-this program.  If not, see http://www.gnu.org/licenses/ .
---------------------------------------------------------------------------------
-For further information and questions please use the web site
-    http://scatterweb.mi.fu-berlin.de
-and the mailinglist (subscription via web site)
-    scatterweb@lists.spline.inf.fu-berlin.de
-*******************************************************************************/
+/*
+ * board_common_init.c - common initialization of the msba2-based boards.
+ *
+ * Copyright (C) 2013 Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
+ *
+ * This source code is licensed under the LGPLv2 license,
+ * See the file LICENSE for more details.
+ */
 
 /**
  * @ingroup msba2
@@ -31,14 +14,14 @@ and the mailinglist (subscription via web site)
 
 /**
  * @file
- * @brief       MSB-A2 board initialization
+ * @brief       MSB-A2 based board initialization
  *
- * @author      Freie Universit√§t Berlin, Computer Systems & Telematics, FeuerWhere project
+ * @author      Freie Universit‰t Berlin, Computer Systems & Telematics
  * @author      Heiko Will
  * @author      Kaspar Schleiser
  * @author      Michael Baar <baar@inf.fu-berlin.de>
- * @author 		Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
- * @note        $Id$
+ * @author      Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
+ * @note        $Id: board_common_init.c 3857 2013-09-24 18:55:25 kasmi $
  */
 #include <board.h>
 #include <lpc23xx.h>
@@ -53,28 +36,27 @@ and the mailinglist (subscription via web site)
 
 /*---------------------------------------------------------------------------*/
 /**
- * @brief   Enabling MAM and setting number of clocks used for Flash memory fetch
+ * @brief   Enabling MAM and setting number of clocks used for Flash memory
+ *          fetch
  * @internal
  */
-static void
-init_mam(void)
+static void init_mam(void)
 {
     MAMCR  = 0x0000;
     MAMTIM = 0x0003;
     MAMCR  = 0x0002;
 }
-/*---------------------------------------------------------------------------*/
-static inline void
-pllfeed(void)
+
+static inline void pllfeed(void)
 {
     PLLFEED = 0xAA;
     PLLFEED = 0x55;
 }
 
-
-void init_clks2(void){
+void init_clks2(void)
+{
     // Wait for the PLL to lock to set frequency
-    while(!(PLLSTAT & BIT26));
+    while (!(PLLSTAT & BIT26));
 
     // Connect the PLL as the clock source
     PLLCON = 0x0003;
@@ -86,10 +68,9 @@ void init_clks2(void){
 
 void bl_init_clks(void)
 {
-    PCONP = PCRTC;          // switch off everything except RTC
+    PCONP = PCRTC;   // switch off everything except RTC
     init_clks1();
     init_clks2();
     init_mam();
 }
 
-/*---------------------------------------------------------------------------*/

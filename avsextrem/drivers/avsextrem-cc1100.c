@@ -1,5 +1,5 @@
 /*
-* avsextrem-cc1100.c - CC100 Transceiver Driver for the AVSEXTREM-BOARD.
+* avsextrem-cc1100.c - CC1100 Transceiver Driver for the AVSEXTREM-BOARD.
 * Copyright (C) 2013 Heiko Will <hwill@inf.fu-berlin.de>
 *
 * This source code is licensed under the LGPLv2 license,
@@ -9,18 +9,16 @@
 
 
 /**
- * @file
- * @ingroup	LPC2387
- * @brief	CC1100 LPC2387 dependend functions
+ * @brief       CC1100 Transceiver Driver for the AVSEXTREM-BOARD.
  *
  * @author      Freie Universität Berlin, Computer Systems & Telematics
  * @author      Heiko Will <hwill@inf.fu-berlin.de>
  * @author      Thomas Hillebrandt <hillebra@inf.fu-berlin.de>
  * @author      Zakaria Kasmi <zkasmi@inf.fu-berlin.de>
  *
- * @version     $Revision: 1781 $
+ * @version     $Revision: 1782 $
  *
- * @note        $Id: avsextrem-cc1100.c 1781 2013-08-14 13:39:36Z kasmi $
+ * @note        $Id: avsextrem-cc1100.c 1781 2013-09-24 19:21:41 kasmi $
  */
 
 #include <stdio.h>
@@ -35,14 +33,15 @@
 
 #define CC1100_GDO0   (FIO2PIN & BIT6)  // read serial I/O (GDO0)
 #define CC1100_GDO1   (FIO0PIN & BIT8)  // read serial I/O (GDO1)
-#define CC1100_GDO2   (FIO0PIN & BIT28)	// read serial I/O (GDO2)
+#define CC1100_GDO2   (FIO0PIN & BIT28) // read serial I/O (GDO2)
 
 #define SPI_TX_EMPTY  (SSP1SR & SSPSR_TFE)
 #define SPI_BUSY      (SSP1SR & SSPSR_BSY)
 #define SPI_RX_AVAIL  (SSP1SR & SSPSR_RNE)
 
 #define CC1100_GDO1_LOW_RETRY   (100)   // max. retries for GDO1 to go low
-#define CC1100_GDO1_LOW_COUNT   (2700)  // loop count (timeout ~ 500 us) to wait
+#define CC1100_GDO1_LOW_COUNT   (2700)  // loop count (timeout ~ 500 us) to
+// wait
 // for GDO1 to go low when CS low
 
 //#define DEBUG
@@ -99,7 +98,7 @@ void cc1100_spi_init(void)
     PINSEL0 |= BIT15;   // Set CLK function to SSP1
     PINSEL0 &= ~BIT14;
     PINSEL0 |= BIT17 ;  // Set MISO function to SSP1
-    PINSEL0 &= ~BIT16;                                      
+    PINSEL0 &= ~BIT16;
     PINSEL0 |= BIT19;   // Set MOSI function to SSP1
     PINSEL0 &= ~BIT18;
     // Interface Setup
@@ -119,7 +118,7 @@ void cc1100_spi_init(void)
 
     // Clear RxFIFO:
     while (SPI_RX_AVAIL) {   // while RNE (Receive FIFO Not Empty)...
-        dummy = SSP1DR;	     // read data
+        dummy = SSP1DR;      // read data
     }
 }
 
